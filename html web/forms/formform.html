@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form id="form1">
+            Nome: <input name="fname" type="text" id="fname" size="20"><br>
+            Sobrenome: <input name="lname" type="text" id="lname" size="20"><br>
+            País: <select id="country" name="country">
+                <option value="Brasilsilsil">Brasilsilsil</option>
+                <option value="EUA">EUA</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Franca">Franca</option>
+                </select>
+                <button onclick="enviar()">Enviar</button>
+
+            <script>
+                function enviar()
+                {
+
+                    var fname = document.getElementById("fname").value;
+                    var lname = document.getElementById("lname").value;
+                    var country = document.getElementById("country").value;
+
+                    document.write("Olá, " + fname + " " + lname + ".<br>");
+                    document.write("O país selecionado foi " + country + ".<br>");
+                }
+            </script>
+    </body>
+</html>

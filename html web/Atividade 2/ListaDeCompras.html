@@ -1,0 +1,98 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        Item1:<select id="item1" name="item1"><br>
+            <option value="6">Banana</option>
+            <option value="3">Maca</option>
+            <option value="6">Pera</option>
+            <option value="2">Melancia</option>
+            <option value="4">Abacate</option>
+            <option value="3">Carne</option>
+            <option value="4">Alface</option>
+            <option value="5">Tomate</option>
+            <option value="1">Pao</option>
+            <option value="3">Jaca</option>
+            </select><br>
+            Item2:<select id="item2" name="item2"><br>
+                <option value="6">Banana</option>
+                <option value="3">Maca</option>
+                <option value="6">Pera</option>
+                <option value="2">Melancia</option>
+                <option value="4">Abacate</option>
+                <option value="3">Carne</option>
+                <option value="4">Alface</option>
+                <option value="5">Tomate</option>
+                <option value="1">Pao</option>
+                <option value="3">Jaca</option>
+                </select><br>
+                Item3:<select id="item3" name="item3"><br>
+                    <option value="6">Banana</option>
+                    <option value="3">Maca</option>
+                    <option value="6">Pera</option>
+                    <option value="2">Melancia</option>
+                    <option value="4">Abacate</option>
+                    <option value="3">Carne</option>
+                    <option value="4">Alface</option>
+                    <option value="5">Tomate</option>
+                    <option value="1">Pao</option>
+                    <option value="3">Jaca</option>
+                    </select><br>
+                    Item4:<select id="item4" name="item4"><br>
+                        <option value="6">Banana</option>
+                        <option value="3">Maca</option>
+                        <option value="6">Pera</option>
+                        <option value="2">Melancia</option>
+                        <option value="4">Abacate</option>
+                        <option value="3">Carne</option>
+                        <option value="4">Alface</option>
+                        <option value="5">Tomate</option>
+                        <option value="1">Pao</option>
+                        <option value="3">Jaca</option>
+                        </select><br>
+                        Item5:<select id="item5" name="item5"><br>
+                            <option value="6">Banana</option>
+                            <option value="3">Maca</option>
+                            <option value="6">Pera</option>
+                            <option value="2">Melancia</option>
+                            <option value="4">Abacate</option>
+                            <option value="3">Carne</option>
+                            <option value="4">Alface</option>
+                            <option value="5">Tomate</option>
+                            <option value="1">Pao</option>
+                            <option value="3">Jaca</option>
+                            </select><br>
+                            Item6:<select id="item6" name="item6"><br>
+                                <option value="6">Banana</option>
+                                <option value="3">Maca</option>
+                                <option value="6">Pera</option>
+                                <option value="2">Melancia</option>
+                                <option value="4">Abacate</option>
+                                <option value="3">Carne</option>
+                                <option value="4">Alface</option>
+                                <option value="5">Tomate</option>
+                                <option value="1">Pao</option>
+                                <option value="3">Jaca</option>
+                                </select><br>
+
+            <button onclick="enviar()">Enviar</button>
+
+            <script>
+                function enviar()
+                {
+                    var item1 = parseInt(document.getElementById("item1").value);
+                    var item2 = parseInt(document.getElementById("item2").value);
+                    var item3 = parseInt(document.getElementById("item3").value);
+                    var item4 = parseInt(document.getElementById("item4").value);
+                    var item5 = parseInt(document.getElementById("item5").value);
+                    var item6 = parseInt(document.getElementById("item6").value);
+
+                    var total = (item1 + item2 + item3 + item4 + item5 + item6);
+                    
+                    document.write("O valor total de compra é: " + total);
+            
+                }
+            </script>
+    </body>
+</html>

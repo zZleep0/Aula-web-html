@@ -1,0 +1,33 @@
+html,body
+{
+	text-decoration: none;
+	text-capitalize: capitalize;
+	text-align: center;
+	margin: 10px;
+	padding-top: 50px;
+
+	color: white;
+	background-color: rgb(1, 1, 63);
+
+	font-family: serif;
+	font-size: 25px;
+	font-weight: normal;
+}
+
+.btn
+{
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 10px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.btn:hover
+{
+	background-color: crimson;
+	color: black;
+}

@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Média</title>
+	</head>
+	<body>
+		<form id="form1">
+			Digite a nota da N1:<input name="num1" type="number" id="n1" size="20" step="0.5"><br>
+			Digite a nota da N2:<input name="num2" type="number" id="n2" size="20" step="0.5"><br>
+			Digite as faltas:<input name="faltas" type="number" id="f" size="20"><br>
+			
+			<button onclick="Media()">Calcular</button>
+			
+			<script>
+				function Media()
+				{
+					var n1 = parseFloat(document.getElementById("n1").value);
+					var n2 = parseFloat(document.getElementById("n2").value);
+					var f = parseInt(document.getElementById("f").value);
+					
+					var media = (n1*0.4 + n2*0.6).toFixed(1);
+					
+					document.write("A média é " + media);
+					
+					//Faltas aceitas até no máximo 20.
+					//Verificar se o estudante foi:
+					//Aprovado,
+					//Reprovado por nota,
+					//Reprovado por falta,
+					//Reprovado por nota e falta.
+					if(media >= 6)
+					{
+						if(f>20)
+						{
+							document.write("<br><br>Reprovado por falta.");
+						}
+						else
+						{
+							document.write("<br><br>Aprovado.");
+						}
+					}
+					else
+					{
+						document.write("<br><br>Reprovado por nota");
+						if(f>20)
+						{
+							document.write(" e falta");
+						}
+					}
+				}
+			</script>
+	</body>
+</html>

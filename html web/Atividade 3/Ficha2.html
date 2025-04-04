@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>FichaPersonagem</title>
+        <link rel="stylesheet" href="visualFicha.css"/>
+
+    </head>
+    <body>
+        <form id="form1">
+            Nome: <input name="fname" type="text" id="fname" size="20"><br>
+            Sobrenome: <input name="lname" type="text" id="lname" size="20"><br>
+            Classe: <select id="class" name="class">
+                <option value="Mago">Mago</option>
+                <option value="Guerreiro">Guerreiro</option>
+                <option value="Arqueiro">Arqueiro</option>
+                <option value="Druida">Druida</option>
+                </select>
+            Idade:<input type="date" id="old" name="old"
+                value="2025-02-20"
+                min="1900-01-01" max="2007-02-20"><br>
+            Atributo:<select id="atrib" name="atrib"><br>
+                <option value="Força">Força</option>
+                <option value="Destreza">Destreza</option>
+                <option value="Constituição">Constituição</option>
+                <option value="Inteligencia">Inteligencia</option>
+                <option value="Sabedoria">Sabedoria</option>
+                <option value="Carisma">Carisma</option>
+                    </select><br>
+             Qual inimimgo batalhar:<select id="enemy" name="enemy"><br>
+                <option value="Goblin">Goblin</option>
+                <option value="Troll">Troll</option>
+                <option value="Esqueleto">Esqueleto</option>
+                    </select><br>
+
+
+                <button class="btn" onclick="enviar()">Enviar</button>
+
+            <script>
+                function enviar()
+                {
+
+                    //Player
+                    var fname = document.getElementById("fname").value;
+                    var lname = document.getElementById("lname").value;
+                    var classe = document.getElementById("class").value;
+                    var age = document.getElementById("old").value;
+                    var atrib = document.getElementById("atrib").value;
+                    var enemy = document.getElementById("enemy").value;
+
+                    var ataque;
+                    var defesa;
+                    var qtvida;
+
+                    if (atrib == "Força"){
+                        ataque = 100;
+                        defesa = 20;
+                        qtvida = 50;
+                    }
+                    else if (atrib == "Destreza") {
+                        ataque = 90;
+                        defesa = 30;
+                        qtvida = 60;
+                    }
+                    else if (atrib == "Constituição") {
+                        ataque = 80;
+                        defesa = 40;
+                        qtvida = 70;
+                    }
+                    else if (atrib == "Inteligencia") {
+                        ataque = 70;
+                        defesa = 50;
+                        qtvida = 80;
+                    }
+                    else if (atrib == "Sabedoria") {
+                        ataque = 60;
+                        defesa = 60;
+                        qtvida = 90;
+                    }
+                    else if (atrib == "Carisma") {
+                        ataque = 50;
+                        defesa = 70;
+                        qtvida = 100;
+                    }
+
+
+                    //Monstros
+                    if (enemy == "Goblin"){
+                        var mname = "Goblin";
+                    var mclass = "Guerreiro";
+                    var mataque = 20;
+                    var mdefesa = 20;
+                    var mvida = 50;
+                    }
+
+                    else if (enemy == "Troll"){
+                        var mname = "Troll";
+                    var mclass = "Druida";
+                    var mataque = 10;
+                    var mdefesa = 40;
+                    var mvida = 100;
+                    }
+
+                    else if (enemy == "Esqueleto"){
+                        var mname = "Esqueleto";
+                    var mclass = "Arqueiro";
+                    var mataque = 40;
+                    var mdefesa = 10;
+                    var mvida = 30;
+                    }
+
+                    
+
+                    
+
+
+                    //Mostrar na tela
+                    document.write('<link rel="stylesheet" href="visualFicha.css"/>');
+
+                    document.write("Olá, " + fname + " " + lname + ".<br>");
+                    document.write("A classe selecionada foi " + classe + ".<br>");
+                    document.write("Você nasceu em: " + age + "<br>");
+                    document.write("O atributo escolhido foi: " + atrib + "<br>");
+                    document.write("<br>");
+
+                    document.write ("Seus Status: ataque: " + ataque + ", defesa: " + defesa + ", vida: " + qtvida + "<br>");
+                    document.write("Status do " + mname + ": ataque: " + mataque +", defesa: "+ mdefesa +", vida: "+ mvida + "<br>");
+                    document.write("<br>");
+
+                    
+
+                    //Ataque
+                    mvida = mvida - (ataque - mdefesa);
+                    document.write ("vida do " + mname + " " + mvida + "<br>");
+
+                    //Defesa
+                    qtvida = qtvida - (mataque - defesa);
+                    document.write("sua vida: " + qtvida + "<br>");
+
+
+                    //Espaçamento
+                    document.write("<br>");
+
+
+                    //Condicao de derrota/vitoria
+                    if (qtvida <= 0){
+                        qtvida = 0;
+                        document.write("DERROTA");
+                    }
+                    else if (mvida <= 0){
+                        document.write("Vitoria");
+                    } 
+                    else{
+                        document.write("Ninguem morreu no combate");
+                    }
+                }
+
+            </script>
+    </body>
+</html>

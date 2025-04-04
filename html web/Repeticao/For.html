@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Contador</title>
+
+    </head>
+    <body>
+        <form id="form1">
+            Até quanto voce quer contar? <input name="number" type="number" id="num" size="10"><br>
+        </form>
+
+        <button onclick="Contar()">Contador</button>
+        <button onclick="Star()">Estrelas</button>
+        <button onclick="Stop()">Parar</button>
+
+        <script>
+            function Contar(){
+                var loop = parseInt(document.getElementById("num").value);
+
+                for (i = 1; i <= loop; i++){
+                    document.write(i + "<br>"); // repeticao com base no numero digitado anteriormente
+                }
+            }
+
+            function Star(){
+                var loop = parseInt(document.getElementById("num").value);
+
+                for (i = 1; i <= loop; i++){
+                    for (j=1; j<=i; j++){ 
+                        document.write("*"); //Contar o numero adicionado do anterior
+                    }
+                    document.write("<br>");
+                }
+            }
+
+            function Stop(){
+                var texto = "";
+                while(texto != "PARE"){
+                    texto = prompt("Digite uma palavra");
+                    texto = texto.toUpperCase(); //Deixar tudo maiusculo caso o usuario digite em minusculo
+                }
+            }
+        </script>
+    </body>
+</html>
